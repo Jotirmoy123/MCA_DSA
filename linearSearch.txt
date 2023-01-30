@@ -1,0 +1,25 @@
+// linear search
+#include <stdio.h>
+int main()
+{
+    int array[5] = {23, 43, 3, 9, 2};
+    int i, element;
+
+    printf("Enter the number which you want to search\n");
+    scanf("%d", &element);
+
+    for (i = 0; i < 5; i++) // for traverse the array
+    {
+        if (array[i] == element)
+        {
+            printf("Success %d found at %dth index", element, i);
+            break;
+        }
+
+        // here 4 is last last index because our array size is 5 (so idex is 0-4)
+        if (i == 4 && array[i] != element) // if it is last index and element not matched
+        {
+            printf("Element not found");
+        }
+    }
+}
